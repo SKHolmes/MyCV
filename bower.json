@@ -1,0 +1,24 @@
+{
+  "name": "CV",
+  "homepage": "https://github.com/SKHolmes/MyCV",
+  "authors": [
+    "SKHolmes <samualkholmes@gmail.com>"
+  ],
+  "description": "My CV",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  }
+}
