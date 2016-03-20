@@ -3,19 +3,55 @@
 <head>
 	<meta charset="utf-8">
 	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>	
-	<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html"
+	<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+	<link rel="import" href="bower_components/paper-card/paper-card.html">
+	<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+	<link rel="import" href="bower_components/iron-icons/communication-icons.html">
 </head>
 <body>
 	<template is="dom-bind" id="app">
 		<paper-toolbar>
-		  <span class="title">Title</span>
-		</paper-toolbar>
-		<script>
-			alert('Loaded');
-		</script>
-	</template>
-	<!-- build:js scripts/app.js -->
-	<script src="./app.js"></script>
-	<!-- endbuild-->
+		<span class="title">Title</span>
+	</paper-toolbar>
+	<style is="custom-style">
+		paper-card.rate { @apply(--layout-horizontal); }
+		.rate-image {
+			width: 100px;
+			height: 170px;
+			background: url('./images/Mug.jpg');
+			background-size: cover;
+		}
+		.rate-content {
+			@apply(--layout-flex);
+			float: left;
+		}
+		.rate-header { @apply(--paper-font-headline); }
+		.rate-name { color: var(--paper-grey-600); margin: 10px 0; }
+		paper-icon-button.rate-icon {
+			--iron-icon-fill-color: white;
+			--iron-icon-stroke-color: var(--paper-grey-600);
+		}
+	</style>
+	<paper-card class="rate">
+	<div class="rate-content">
+		<div class="card-content">
+			<div class="rate-header">Rate this album</div>
+			<div class="rate-name">Mac Miller</div>
+			<div>Live from space</div>
+		</div>
+		<div class="card-actions">
+			<paper-icon-button class="rate-icon" icon="communication:call" color="#FFAAAA"></paper-icon-button>
+			<paper-icon-button class="rate-icon" icon="star"></paper-icon-button>
+			<paper-icon-button class="rate-icon" icon="star"></paper-icon-button>
+			<paper-icon-button class="rate-icon" icon="star"></paper-icon-button>
+			<paper-icon-button class="rate-icon" icon="star"></paper-icon-button>
+		</div>
+	</div>
+	<div class="rate-image"></div>
+</paper-card>
+</template>
+<!-- build:js scripts/app.js -->
+<script src="./app.js"></script>
+<!-- endbuild-->
 </body>
 </html>
