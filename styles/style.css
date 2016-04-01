@@ -7,6 +7,8 @@
 	border-radius: 5px;
 	border-color: #8e8c83;
 	box-shadow: 10px 10px 5px #888888;
+	background-color: #3F51B5;
+
 }
 
 hr{
@@ -16,9 +18,27 @@ hr{
 
 h1{
 	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
 }
 
 .invisible{
 	display: none;
 	margin: 16px;
+}
+
+.rate{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#toolbar{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#gitButton{
+	margin: 16px;
+	background-color: #B53F51;
+	box-shadow: 2px 2px 1px #888888;
 }

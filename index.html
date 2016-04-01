@@ -9,11 +9,12 @@
 	<link rel="import" href="bower_components/iron-icons/communication-icons.html">
 	<link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
 	<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 	<template is="dom-bind" id="app">
-		<paper-toolbar>
+		<paper-toolbar id="toolbar">
 		<span class="title" >Samual Kaleb Baldwin-Holmes</span>
 	</paper-toolbar>
 	<style is="custom-style">
@@ -56,6 +57,8 @@
 <div id="contactDetails" class="invisible">
 	<h1>Contact Details</h1>
 	<hr>
+	<div id="githubDiv"></div>
+	<a href="https://github.com/SKHolmes">GitHub Profile.</a>
 </div>
 <!-- build:js scripts/app.js -->
 <script src="./app.js"></script>

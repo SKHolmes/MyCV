@@ -4,29 +4,37 @@
   var app = document.querySelector('#app');
   window.addEventListener('WebComponentsReady', function() {
 
-    var mainCollapse;
-    var toggled;
-    //var contactDetails = "<h1 margin='8px'>Contact Details.</h1><hr>";
-    var contactDetails = document.getElementById("contactDetails").innerHTML;
+    var mainCollapse = document.getElementById("collapse");
+    var contactDetailsDiv = document.getElementById("contactDetails");
 
-/*    mainCollapse = document.createElement("iron-collapse");
-    Polymer.dom(mainCollapse).innerHTML = contactDetails;
-    Polymer.dom(mainCollapse).id = "collapse";
-    document.getElementById("editable").appendChild(mainCollapse);*/
+    var gitBtn = document.createElement("paper-button");
 
-    mainCollapse = document.getElementById("collapse");
-    mainCollapse.innerHTML = contactDetails;
+    gitBtn.addEventListener("click", function(){
+      console.log('here0');
+      location.href = "https://github.com/SKHolmes";
+    });
+
+    var contactDetailsInitialised = false;
 
     document.getElementById("contact-button").addEventListener("click", function(){
-      mainCollapse.toggle();
-      toggled = !toggled;
-      app.displayContactDetails();      
+      app.displayContactDetails();    
+      mainCollapse.toggle();      
     });
 
     app.displayContactDetails = function(){
-      console.log("this is okay");
-    }
 
+      if(!contactDetailsInitialised){
+        gitBtn.textContent = 'GitHub Profile.';
+        gitBtn.raised = true;
+        gitBtn.id = 'gitButton';
+        var githubDiv = document.getElementById("githubDiv");
+        githubDiv.appendChild(gitBtn);
+        contactDetails
+        nitialised = true;
+      }
+      var contactDetails = contactDetailsDiv.innerHTML;
+      mainCollapse.innerHTML = contactDetails;
+    }
   });  
 })(document);
 
