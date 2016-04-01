@@ -9,11 +9,12 @@
 	<link rel="import" href="bower_components/iron-icons/communication-icons.html">
 	<link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
 	<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 	<template is="dom-bind" id="app">
 		<paper-toolbar>
-		<span class="title">Samual Kaleb Baldwin-Holmes</span>
+		<span class="title" >Samual Kaleb Baldwin-Holmes</span>
 	</paper-toolbar>
 	<style is="custom-style">
 		paper-card.rate { @apply(--layout-horizontal); }
@@ -48,8 +49,14 @@
 	</div>
 	<div class="rate-image"></div>
 </paper-card>
-<div id="editable"></div>
+<div id="editable">
+	<iron-collapse id="collapse"></iron-collapse>
+</div>
 </template>
+<div id="contactDetails" class="invisible">
+	<h1>Contact Details</h1>
+	<hr>
+</div>
 <!-- build:js scripts/app.js -->
 <script src="./app.js"></script>
 <!-- endbuild-->
