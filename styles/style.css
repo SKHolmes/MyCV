@@ -11,8 +11,14 @@
 
 hr{
 	color: #8e8c83;
+	margin: 8px;
+}
+
+h1{
+	font-weight: 200;
 }
 
 .invisible{
 	display: none;
+	margin: 16px;
 }
