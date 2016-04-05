@@ -4,37 +4,57 @@
   var app = document.querySelector('#app');
   window.addEventListener('WebComponentsReady', function() {
 
-    var mainCollapse = document.getElementById("collapse");
-    var contactDetailsDiv = document.getElementById("contactDetails");
+    var mainCollapse = document.getElementById('collapse');
 
-    var gitBtn = document.createElement("paper-button");
+    /*--------------Contact Details Collapseable--------------*/
+    var contactDetailsDiv = document.getElementById('contactDetails');
+    var gitBtn = document.createElement('paper-button');
+    gitBtn.textContent = 'GitHub Profile.';
+    gitBtn.raised = true;
+    gitBtn.id = 'gitButton';
+    gitBtn.link = 'https://github.com/SKHolmes';
+    gitBtn.onClick = function(){ console.log('here'); }        
+    var githubDiv = document.getElementById('githubDiv');
+    githubDiv.appendChild(gitBtn);
 
-    gitBtn.addEventListener("click", function(){
-      console.log('here0');
-      location.href = "https://github.com/SKHolmes";
-    });
+    /*--------------Reference Details Collapseable--------------*/
+    var referencesDetailsDiv = document.getElementById('referencesDetails');
 
-    var contactDetailsInitialised = false;
 
-    document.getElementById("contact-button").addEventListener("click", function(){
+
+    app.displayContactDetails = function(){
+      var contactDetails = contactDetailsDiv.innerHTML;
+      mainCollapse.innerHTML = contactDetails;
+    }
+
+    app.displayReferenceDetails = function(){
+      var referencesDetails = referencesDetailsDiv.innerHTML;
+      mainCollapse.innerHTML = referencesDetails;
+    }
+
+    //Button Listeners
+    document.getElementById('contact-button').addEventListener('click', function(){
       app.displayContactDetails();    
       mainCollapse.toggle();      
     });
 
-    app.displayContactDetails = function(){
-
-      if(!contactDetailsInitialised){
-        gitBtn.textContent = 'GitHub Profile.';
-        gitBtn.raised = true;
-        gitBtn.id = 'gitButton';
-        var githubDiv = document.getElementById("githubDiv");
-        githubDiv.appendChild(gitBtn);
-        contactDetails
-        nitialised = true;
+    document.getElementById('reference-button').addEventListener('click', function(){
+      if(mainCollapse.opened){
+        mainCollapse.toggle();
       }
-      var contactDetails = contactDetailsDiv.innerHTML;
-      mainCollapse.innerHTML = contactDetails;
-    }
+      while(true){
+        setTimeout(function(){ 
+          console.log('after timeout'); 
+          break next;
+        }, 2000);
+      }
+      next: app.displayReferenceDetails();
+
+      mainCollapse.toggle();
+    });
+    document.getElementById('gitButton').addEventListener('click', function(){
+      console.log('here');
+    });
   });  
 })(document);
 

@@ -1,6 +1,9 @@
+*{
+	font-family: 'Roboto', 'Noto', sans-serif;
+}
+
 #collapse{
 	margin-top: 4px;
-	font-family: 'Roboto', 'Noto', sans-serif;
 	font-weight: 200;
 	border: solid;
 	border-width: 1px;
@@ -8,7 +11,6 @@
 	border-color: #8e8c83;
 	box-shadow: 10px 10px 5px #888888;
 	background-color: #3F51B5;
-
 }
 
 hr{
@@ -17,6 +19,18 @@ hr{
 }
 
 h1{
+	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
+}
+
+h3{
+	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
+}
+
+h4{
 	font-weight: 200;
 	margin: 16px;
 	color: #FFFFFF;
@@ -41,4 +55,10 @@ h1{
 	margin: 16px;
 	background-color: #B53F51;
 	box-shadow: 2px 2px 1px #888888;
+}
+
+.info{
+	font-weight: 200;
+	margin: 16px;
+	color: #FFFFFF;
 }

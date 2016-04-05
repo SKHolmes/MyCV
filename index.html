@@ -10,12 +10,13 @@
 	<link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
 	<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
 	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 	<template is="dom-bind" id="app">
 		<paper-toolbar id="toolbar">
-		<span class="title" >Samual Kaleb Baldwin-Holmes</span>
+		<span class="title">Samual Kaleb Baldwin-Holmes</span>
 	</paper-toolbar>
 	<style is="custom-style">
 		paper-card.rate { @apply(--layout-horizontal); }
@@ -45,6 +46,7 @@
 		</div>
 		<div class="card-actions" id="button-set">
 			<paper-icon-button class="rate-icon" id="contact-button" icon="communication:call"></paper-icon-button>
+			<paper-icon-button class="rate-icon" id="reference-button" icon="icons:record-voice-over"></paper-icon-button>
 			<paper-tooltip for="contact-button" offset="0">Contact me</paper-tooltip>
 		</div>
 	</div>
@@ -58,7 +60,10 @@
 	<h1>Contact Details</h1>
 	<hr>
 	<div id="githubDiv"></div>
-	<a href="https://github.com/SKHolmes">GitHub Profile.</a>
+	<p class="info">Email: samualkholmes@gmail.com</p>
+</div>
+<div id="referencesDetails" class="invisible">
+	
 </div>
 <!-- build:js scripts/app.js -->
 <script src="./app.js"></script>
