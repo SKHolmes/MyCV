@@ -46,7 +46,15 @@ h4{
 	border-bottom-right-radius: 5px;
 }
 
+#contact-button{
+	fill: #3F51B5;
+}
+.rate-icon{
+	fill: #3F51B5;
+}
+
 #toolbar{
+	background: #303F9F;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
@@ -61,4 +69,12 @@ h4{
 	font-weight: 200;
 	margin: 16px;
 	color: #FFFFFF;
+}
+
+.reference{
+
+}
+
+.refDetails{
+
 }
