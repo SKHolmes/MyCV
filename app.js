@@ -12,32 +12,13 @@
 
     var mainCollapse = document.getElementById('collapse');
     var currentDisplay = app.DisplayEnums.NONE;
+    var animationDelay = 400;
 
     /*--------------Contact Details Collapseable--------------*/
     var contactDetailsDiv = document.getElementById('contactDetails');
-    var gitBtn = document.createElement('paper-button');
-    gitBtn.textContent = 'GitHub Profile.';
-    gitBtn.raised = true;
-    gitBtn.id = 'gitButton';
-    gitBtn.link = 'https://github.com/SKHolmes';
-    app.listen(gitBtn, 'tap', 'test');
-    app.listen(gitBtn, 'click', 'test');
-    gitBtn.addEventListener('tap', function(){
-      alert('here');
-    });
-
-    gitBtn.onclick = 'test';
-    gitBtn.click = function(){ console.log('here'); }        
-    var githubDiv = document.getElementById('githubDiv');
-    githubDiv.appendChild(gitBtn);
 
     /*--------------Reference Details Collapseable--------------*/
     var referencesDetailsDiv = document.getElementById('referencesDetails');
-
-    app.test = function(){
-      console.log('here');
-    }
-    gitBtn.setAttribute('on-click', 'test');
 
     app.displayContactDetails = function(){
       var contactDetails = contactDetailsDiv.innerHTML;
@@ -64,7 +45,7 @@
         setTimeout(function(){ 
           app.displayContactDetails();
           mainCollapse.toggle();
-        }, 500); 
+        }, animationDelay); 
       //If the collapse is not opened we can just 
       }else if(!mainCollapse.opened){
         app.displayContactDetails();
@@ -84,35 +65,13 @@
         setTimeout(function(){ 
           app.displayReferenceDetails();
           mainCollapse.toggle();
-        }, 400); 
+        }, animationDelay); 
       //If the collapse is not opened we can just 
       }else if(!mainCollapse.opened){
         app.displayReferenceDetails();
         mainCollapse.toggle();
       }
     });
-
-    document.getElementById('gitButton').addEventListener('click', function(){
-      console.log('hello?');
-    });
-
-
-      /*while(true){
-        setTimeout(function(){ 
-          console.log('after timeout'); 
-          break next;
-        }, 2000);
-      }
-      next: app.displayReferenceDetails();*/
-
-/*      mainCollapse.toggle();
-    });
-    */
-    
-    document.getElementById('gitButton').addEventListener('click', function(){
-      console.log('here');
-    });
-
   });  
 })(document);
 

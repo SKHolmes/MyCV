@@ -47,10 +47,16 @@
 		<div class="card-actions" id="button-set">
 			<paper-icon-button class="rate-icon" id="contact-button" icon="communication:call"></paper-icon-button>
 			<paper-icon-button class="rate-icon" id="reference-button" icon="icons:record-voice-over"></paper-icon-button>
-			<paper-tooltip for="contact-button" offset="0">Contact me</paper-tooltip>
-		</div>
+			<a href="https://github.com/SKHolmes">
+				<paper-icon-button id="git-button" style="float: right;" src="./images/github_icon.png">
+			</a>
+		</paper-icon-button>
+		<paper-tooltip for="contact-button" offset="0">Contact me</paper-tooltip>
+		<paper-tooltip for="reference-button" offset="0">References</paper-tooltip>
+		<paper-tooltip for="git-button" offset="0">View my GitHub</paper-tooltip>
 	</div>
-	<div class="rate-image"></div>
+</div>
+<div class="rate-image"></div>
 </paper-card>
 <div id="editable">
 	<iron-collapse id="collapse"></iron-collapse>
