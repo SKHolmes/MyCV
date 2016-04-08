@@ -1,1 +1,19 @@
-{}
+{
+  "name": "my-cv",
+  "version": "1.0.0",
+  "description": "an online cv for myself",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SKHolmes/MyCV.git"
+  },
+  "author": "Samual K. Baldwin-Holmes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SKHolmes/MyCV/issues"
+  },
+  "homepage": "https://github.com/SKHolmes/MyCV#readme"
+}
