@@ -1,9 +1,11 @@
+
+
 (function(document) {
   'use strict';
 
   var app = document.querySelector('#app');
   window.addEventListener('WebComponentsReady', function() {
-
+    console.log("loaded");
     app.DisplayEnums = {
       NONE: 'none',
       CONTACT: 'contact',
@@ -133,5 +135,5 @@
       }
     });
   });  
-});
+})(document);
 
