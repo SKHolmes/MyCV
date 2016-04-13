@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>	
+	<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+	<link rel="import" href="bower_components/paper-card/paper-card.html">
+	<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+	<link rel="import" href="bower_components/iron-icons/communication-icons.html">
+	<link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
+	<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<template is="dom-bind" id="app">
+		<paper-toolbar id="toolbar">
+		<span class="title">Samual Kaleb Baldwin-Holmes</span>
+	</paper-toolbar>
+	<style is="custom-style">
+		paper-card.rate { @apply(--layout-horizontal); }
+		.rate-image {
+			width: 100px;
+			height: 170px;
+			background: url('./images/Mug.jpg');
+			background-size: cover;
+		}
+		.rate-content {
+			@apply(--layout-flex);
+			float: left;
+		}
+		.rate-header { @apply(--paper-font-headline); }
+		.rate-name { color: var(--paper-grey-600); margin: 10px 0; }
+		paper-icon-button.rate-icon {
+			--iron-icon-fill-color: white;
+			--iron-icon-stroke-color: var(--paper-grey-600);
+		}
+	</style>
+	<paper-card class="rate">
+	<div class="rate-content">
+		<div class="card-content">
+			<div class="rate-header">Curriculum Vitae</div>
+			<div class="rate-name">Final Year BSc Computer Science</div>
+			<div>Victoria Univeristy, Wellington</div>
+		</div>
+		<div class="card-actions" id="button-set">
+			<paper-icon-button class="rate-icon" id="contact-button" icon="communication:call"></paper-icon-button>
+			<paper-icon-button class="rate-icon" id="work-history-button" icon="icons:work"></paper-icon-button>
+			<paper-icon-button class="rate-icon" id="reference-button" icon="icons:record-voice-over"></paper-icon-button>
+			<paper-icon-button class="rate-icon" src="./images/test.jpg" id="education-button"></paper-icon-button>			
+			<a href="https://github.com/SKHolmes">
+				<paper-icon-button id="git-button" style="float: right;" src="./images/github_icon.png">
+			</a>
+		</paper-icon-button>
+		<paper-tooltip for="contact-button" offset="0">Contact me</paper-tooltip>
+		<paper-tooltip for="work-history-button" offset="0">Work History</paper-tooltip>
+		<paper-tooltip for="reference-button" offset="0">References</paper-tooltip>
+		<paper-tooltip for="education-button" offset="0">Education and Skills</paper-tooltip>
+		<paper-tooltip for="git-button" offset="0">View my GitHub</paper-tooltip>
+	</div>
+</div>
+<div class="rate-image"></div>
+</paper-card>
+<div id="editable">
+	<iron-collapse id="collapse"></iron-collapse>
+</div>
+</template>
+<!-- ***************CONTACT*************** -->
+<div id="contactDetails" class="invisible">
+	<h1>Contact Details</h1>
+	<hr>
+	<p class="info"><b>Phone:</b> 027 364 6683</p>
+	<p class="info"><b>Email:</b> samualkholmes@gmail.com</p>
+	<p class="info"><b>Address:</b> 55 Rintoul Street, Newtown, Wellington</p>
+	<p class="info"><b>Github:</b> <a style="color: white;" href="https://github.com/SKHolmes">https://github.com/SKHolmes</a></p>
+</div>
+<!-- ***************CONTACT*************** -->
+<!-- ***************WORK*HISTORY*************** -->
+<div id="workHistoryDetails" class="invisible">
+	<h1>Work History</h1>
+	<hr>
+	<p class="info">2009 - 2012<br><b>Hutt City New World, Obsess Café</b><br>- Barista<br>- Checkout Operator</p>
+	<hr>
+	<p class="info">2011 - 2012<br><b>Grace New Zealand Limited</b><br>- Concrete Admixtures Workshop Assisstant</p>
+	<hr>
+	<p class="info">2012 - 2013<br><b>JonesAutomotive</b><br>- Automotive Engineer</p>
+	<hr>
+	<p class="info">2013<br><b>The Backbencher Gastropub</b><br>- Front of House</p>
+	<hr>
+	<p class="info">2013 - Present<br><b>The Backbencher Gastropub</b><br>- Chef</p>
+	<hr>
+	<p class="info">2015<br><b>Victoria University, School of Chemical and Physical Sciences
+	</b><br>- Physics Lab Assisstant and Tutor<br><i>- PHYS122 Trimester One</i><br><i>- SARC122 Trimester Two</i></p>
+</div>
+<!-- ***************WORK*HISTORY*************** -->
+<!-- ***************REFERENCES*************** -->
+<div id="referencesDetails" class="invisible">
+	<h1>Reference Details</h1>
+	<hr>
+	<div class="info" style="overflow: hidden;">
+		<div class="info" style="width: 40%; float: left;">
+			<b>Alistair Boyce</b><br><i>    - Owner Proprietor Backbencher Gastropub</i>
+		</div>
+		<div class="info" style="width: 40%; float: right;">
+			027 651 7711<br>
+			(04) 472 3065
+		</div>
+	</div>
+	<hr>
+	<div class="info" style="overflow: hidden;">
+		<div class="info" style="width: 40%; float: left;">
+			<b>Richard Kirkwood</b><br><i>    - Sous Chef Backbencher Gastropub</i>
+		</div>
+		<div class="info" style="width: 40%; float: right;">
+			<br>
+			(04) 472 3065
+		</div>
+	</div>
+	<hr>
+	<div class="info" style="overflow: hidden;">
+		<div class="info" style="width: 40%; float: left;">
+			<b>Lewis Howells</b><br><i>    - Bar Manager Backbencher Gastropub</i>
+		</div>
+		<div class="info" style="width: 40%; float: right;">
+			enquiries@backbencher.co.nz<br>
+			(04) 472 3065
+		</div>
+	</div>
+	<hr>
+	<div class="info" style="overflow: hidden;">
+		<div class="info" style="width: 40%; float: left;">
+			<b>John Hannah</b><br><i>    - Course Coordinator<br>    School of Chemical and Physical Sciences<br>    Victoria University</i>
+		</div>
+		<div class="info" style="width: 40%; float: right;">
+			<br><br><br>
+			john.hannah@vuw.ac.nz
+		</div>
+	</div>
+	<hr>
+	<div class="info" style="overflow: hidden;">
+		<div class="info" style="width: 40%; float: left;">
+			<b>Karl Holmes</b><br><i>    - Owner Proprietor JonesAutomotive</i>
+		</div>
+		<div class="info" style="width: 40%; float: right;">
+			027 235 5110<br>jonesautomotive@xtra.co.nz
+		</div>
+	</div>
+	<h2><u>Older references can be made available on request.</u></h2>
+</div>
+<!-- ***************REFERENCES*************** -->
+<!-- ***************EDUCATION*************** -->
+<div id="educationDetails" class="invisible">
+	<h1>Education & Skills</h1>
+	<hr>
+	<p class="info">I am well versed and confident in languages such as Java, HTML, CSS, JavaScript, C.<br> I have no problem using version control such as git as I use it extensively for	both my group projects at university and extra-curricular projects at home. This also exposes me to the use of the linux command-line at university and the windows command-line at home.<br> I can create android applications and am working on one for my job currently, I am self-taught, although I will be taking an android course later in 2016.<br> I have been introduced to both structured, waterfall style methodology and agile methodology. I have used agile methods extensively in my group projects using techniques such as, SCRUM poker, stand-ups, agile retrospectives, peer-programming and code-review.<br> I have used front and back-end web development tools such as Express, Node.js, Jade. This website was developed using <a style="color: white;" href="https://www.polymer-project.org/1.0/">Polymer 1.0</a> following Google's material design.<br>
+	Other languages that I am familiar with but not 100% confident in my skills with include C#, MIPS, PostgreSQL, MySQL, Xpath and XQuery. </p>
+	<hr>
+	<p class="info">
+			Studying at Victoria University’s School of Engineering and Computer Science has exposed me to all aspects of software design and analysis, from planning and construction, to testing and maintainability. This extensive experience is something I could contribute to at any given situation or place of employment.<br><br>
+
+			I firmly believe myself to be competent in the agile spectrum of the programming world, I consider the main and most important goal for any project is a minimum viable product. Consequently any application of time should be towards this end goal. Once reached the project must be remain flexible enough to take on any further aspects of the client's requests and continue to be such until the project is completed in it's entirety or time runs out. This requires attentive but minimal planning, making sure we always have our priorities focused on an achievable, set task.<br><br>
+
+			Currently I run a kitchen twice a week consisting of teams of up to 4 other people. A kitchen is a high pressure enviroment to work in and even as such I rarely find myself overwhelmed with my workload. Time management plays a huge factor in ensuring my job is done on time and correctly and I have no trouble making sure my fellow employees get their job done on time too.
+	</p>
+
+	</div>
+	<!-- ***************EDUCATION*************** -->
+	<!-- build:js scripts/app.js -->
+	<script src="./app.js"></script>
+	<!-- endbuild-->
+</body>
+</html>
